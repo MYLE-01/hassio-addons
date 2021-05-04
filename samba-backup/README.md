@@ -41,6 +41,41 @@ _Example configuration_:
 
 **Note**: _This is just an example, don't copy and paste it! Create your own!_
 
+adding a lovelace card
+
+```
+type: entities
+title: Samba Backups
+show_header_toggle: false
+entities:
+  - type: attribute
+    entity: sensor.samba_backup
+    attribute: backups_local
+    name: Local Backups
+    icon: 'mdi:backup-restore'
+  - type: attribute
+    entity: sensor.samba_backup
+    attribute: backups_remote
+    name: Remote Backups
+    icon: 'mdi:backup-restore'
+  - type: attribute
+    entity: sensor.samba_backup
+    attribute: total_backups_succeeded
+    name: Total Backups
+    icon: 'mdi:backup-restore'
+  - type: attribute
+    entity: sensor.samba_backup
+    attribute: total_backups_failed
+    name: Failed Backups
+    icon: 'mdi:backup-restore'
+  - type: attribute
+    entity: sensor.samba_backup
+    attribute: last_backup
+    name: Last Backups
+    icon: 'mdi:backup-restore'
+```
+
+
 
 Please check the **[Documentation](https://github.com/thomasmauerer/hassio-addons/blob/master/samba-backup/DOCS.md)** for a complete reference of all configuration options.
 
